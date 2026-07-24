@@ -1,0 +1,36 @@
+INFINITE WORLD - SITE INSTITUCIONAL - COMO PUBLICAR
+====================================================
+
+O site e estatico (HTML + CSS + JS). Nao precisa de servidor, base de dados
+nem build. Corre em qualquer alojamento de ficheiros. Caminho mais simples:
+GitHub Pages (o mesmo fluxo do manual da marca e da proposta Decadas).
+
+FICHEIROS A PUBLICAR (a pasta inteira site-institucional/)
+  index.html
+  styles.css
+  main.js
+  i18n.js
+  assets/  (logos)
+
+OPCAO A - GitHub Pages (recomendado)
+  1. Criar repo publico, sugestao: ahmedalkarkhy/infinite-world
+  2. Copiar o conteudo de site-institucional/ para a raiz do repo
+  3. git add . && git commit -m "site institucional Infinite World"
+  4. git push origin main
+  5. No GitHub: Settings > Pages > Source = main / (root)
+  6. URL fica: https://ahmedalkarkhy.github.io/infinite-world/
+  7. Dominio proprio (infiniteworld.group) opcional em Settings > Pages > Custom domain
+
+TESTAR LOCALMENTE
+  cd site-institucional
+  python -m http.server 8756
+  abrir http://localhost:8756/index.html
+
+NOTAS
+  - Lingua: ingles por defeito; botao EN/PT no topo troca sem recarregar; a
+    escolha fica guardada no browser.
+  - A morada legal do Dubai aparece no rodape, de proposito (decisao aprovada).
+  - Contacto: o botao "Request a demo" abre email para contact@infiniteworld.group
+    (trocar por endereco real, ou por um formulario Formspree, quando definido).
+  - Fontes via Google Fonts (Montserrat). Com internet no visitante, carregam
+    sempre; sem internet, cai para tipo de sistema.
