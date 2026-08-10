@@ -9,18 +9,18 @@ const I18N = {
 
     hero_eyebrow: "OPERATIONAL INTELLIGENCE",
     hero_h1:
-      'We don\'t sell software.<br><span class="thin">We deliver</span> trust.',
+      'Proprietary software.<br><span class="thin">The entire operation.</span>',
     hero_sub:
-      "Technology that digitises, audits and monetises operations, building trust, transparency, safety and human development. Headquartered in Dubai, built for the world.",
+      "Proprietary platform, real time data, continuous auditing and global scale in the cloud. Headquartered in Dubai, built for the world.",
     cta_demo: "Request a demo",
     cta_platform: "Explore the platform",
     scroll: "SCROLL",
 
     diff_eyebrow: "THE DIFFERENCE",
     diff_h2:
-      "We're not a software company. We're an Operational Intelligence company.",
+      "We are a technology company. Proprietary software, the entire operation, from contract to payment.",
     diff_lead:
-      "Software is only the means. The real product is the trust built between who contracts, who manages, who executes and who is paid.",
+      "Software is the means. The result is the trust between who contracts, who manages, who executes and who is paid.",
     diff_c1_t: "Who contracts",
     diff_c1_d: "Proof of value before deciding.",
     diff_c2_t: "Who manages",
@@ -67,6 +67,38 @@ const I18N = {
     scr_eyebrow: "THE SYSTEM IN SCREENS",
     scr_h2: "Not a concept. A system in operation.",
     scr_lead: "These are the real views management and teams use every day.",
+
+    engine_cap: "Six capabilities, one engine.",
+
+    ft1_k: "COMMAND",
+    ft1_t: "The whole operation in real time.",
+    ft1_d:
+      "Active sites, check-ins, open alerts and the week's reports on a single screen, with the map of the sites on the ground, progress and occupancy included.",
+    ft2_k: "SITES",
+    ft2_t: "Progress reported against hours consumed.",
+    ft2_d:
+      "The comparison that tells the truth. If the site is at 30 per cent and the hours are already at 45, there is still time to correct it.",
+    ft3_k: "PRESENCE",
+    ft3_t: "Only whoever is really there counts.",
+    ft3_d:
+      "Clock-in with geolocation. The perimeter only allows a punch inside the site, photography is mandatory, and time, place and author are stored together.",
+    ft4_k: "SAFETY",
+    ft4_t: "A call for help with address and time.",
+    ft4_d:
+      "The worker holds the emergency button and the alert reaches management with location and status, open or resolved, always followed through.",
+    ft5_k: "TEAM",
+    ft5_t: "The entire workforce, organised.",
+    ft5_d:
+      "Every person with their role, the site they are on and the state of their contract. Directory, org chart and a centralised internal inbox.",
+    ft6_k: "AUDIT",
+    ft6_t: "Nothing is erased. Everything is proven.",
+    ft6_d:
+      "An immutable trail: every operation with author, date, time, origin and version. The record only ever adds, nobody rewrites the past.",
+    ft7_k: "WORKER APP",
+    ft7_t: "The app of whoever builds.",
+    ft7_d:
+      "Sign in, clock in, choose the type of punch. Voice report transcribed automatically. Notifications, payments and the emergency alert.",
+
     scr_1_k: "COMMAND",
     scr_1_t: "Command & Operation",
     scr_1_d:
@@ -184,19 +216,18 @@ const I18N = {
     nav_contact: "Contacto",
 
     hero_eyebrow: "INTELIGÊNCIA OPERACIONAL",
-    hero_h1:
-      'Não vendemos software.<br><span class="thin">Entregamos</span> confiança.',
+    hero_h1: 'Software próprio.<br><span class="thin">Operação inteira.</span>',
     hero_sub:
-      "Tecnologia que digitaliza, audita e rentabiliza operações, promovendo confiança, transparência, segurança e desenvolvimento humano. Sede em Dubai, construída para o mundo.",
+      "Plataforma proprietária, dados em tempo real, auditoria contínua e escala global em nuvem. Sede em Dubai, construída para o mundo.",
     cta_demo: "Pedir demonstração",
     cta_platform: "Ver a plataforma",
     scroll: "SCROLL",
 
     diff_eyebrow: "O DIFERENCIAL",
     diff_h2:
-      "Não somos uma empresa de software. Somos uma empresa de Inteligência Operacional.",
+      "Somos uma empresa de tecnologia. Software próprio, operação inteira, do contrato ao pagamento.",
     diff_lead:
-      "O software é apenas o meio. O verdadeiro produto é a confiança construída entre quem contrata, quem gere, quem executa e quem recebe.",
+      "O software é o meio. O resultado é a confiança entre quem contrata, quem gere, quem executa e quem recebe.",
     diff_c1_t: "Quem contrata",
     diff_c1_d: "Prova de valor antes de decidir.",
     diff_c2_t: "Quem gere",
@@ -244,6 +275,38 @@ const I18N = {
     scr_h2: "Não é um conceito. É um sistema em funcionamento.",
     scr_lead:
       "Estas são as vistas reais que a gestão e as equipas usam todos os dias.",
+
+    engine_cap: "Seis capacidades, um só motor.",
+
+    ft1_k: "COMANDO",
+    ft1_t: "A operação inteira em tempo real.",
+    ft1_d:
+      "Obras activas, check-ins, alertas em aberto e os relatórios da semana num só ecrã, com o mapa das obras no terreno, progresso e ocupação incluídos.",
+    ft2_k: "OBRAS",
+    ft2_t: "Progresso reportado contra horas consumidas.",
+    ft2_d:
+      "A comparação que diz a verdade. Se a obra vai em 30 por cento e as horas já vão em 45, ainda há tempo para corrigir.",
+    ft3_k: "PRESENÇA",
+    ft3_t: "Só conta quem está mesmo lá.",
+    ft3_d:
+      "Ponto com geolocalização. O perímetro só permite bater ponto dentro da obra, a fotografia é obrigatória, e hora, local e autor ficam guardados juntos.",
+    ft4_k: "SEGURANÇA",
+    ft4_t: "Um pedido de socorro com morada e hora.",
+    ft4_d:
+      "O trabalhador mantém premido o botão de emergência e o alerta chega a quem gere, com localização e estado, aberto ou resolvido, sempre acompanhado.",
+    ft5_k: "EQUIPA",
+    ft5_t: "A força de trabalho inteira, organizada.",
+    ft5_d:
+      "Cada pessoa com a sua função, a obra onde está e o estado do contrato. Directório, organograma e caixa interna com as mensagens centralizadas.",
+    ft6_k: "AUDITORIA",
+    ft6_t: "Nada se apaga. Tudo fica provado.",
+    ft6_d:
+      "Trilha imutável: cada operação com autor, data, hora, origem e versão. O registo é apenas de adição, ninguém reescreve o passado.",
+    ft7_k: "APP DO TRABALHADOR",
+    ft7_t: "A app de quem constrói.",
+    ft7_d:
+      "Entrar, bater ponto e escolher o tipo de ponto. Relatório de voz transcrito automaticamente. Notificações, pagamentos e o alerta de emergência.",
+
     scr_1_k: "COMANDO",
     scr_1_t: "Comando e Operação",
     scr_1_d:
@@ -358,7 +421,7 @@ const I18N = {
 };
 
 function applyLang(lang) {
-  const dict = I18N[lang] || I18N.en;
+  const dict = I18N[lang] || I18N[DEFAULT_LANG];
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const v = dict[el.getAttribute("data-i18n")];
@@ -380,10 +443,12 @@ function applyLang(lang) {
   } catch (e) {}
 }
 
+const DEFAULT_LANG = "pt";
+
 (function initLang() {
-  let lang = "en";
+  let lang = DEFAULT_LANG;
   try {
-    lang = localStorage.getItem("iw_lang") || "en";
+    lang = localStorage.getItem("iw_lang") || DEFAULT_LANG;
   } catch (e) {}
   const run = () => {
     applyLang(lang);

@@ -1,20 +1,20 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Infinite World — Operational Intelligence</title>
+    <title>Infinite World | Operational Intelligence</title>
     <meta
       name="description"
-      content="Infinite World is a global technology company headquartered in Dubai. We don't sell software. We deliver trust — technology that digitises, audits and monetises operations."
+      content="Infinite World is a global technology company headquartered in Dubai. Proprietary software, the entire operation, from contract to payment."
     />
     <meta
       property="og:title"
-      content="Infinite World — Operational Intelligence"
+      content="Infinite World | Operational Intelligence"
     />
     <meta
       property="og:description"
-      content="Technology that digitises, audits and monetises operations. Headquartered in Dubai, built for the world."
+      content="Proprietary platform, real time data, continuous auditing and global scale in the cloud. Headquartered in Dubai, built for the world."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/png" href="assets/favicon-256.png" />
@@ -63,33 +63,40 @@
     <main>
       <!-- HERO -->
       <section id="hero" class="hero section">
-        <img
-          class="hero-mark"
-          src="assets/IW-laco-transparente-escuro-4096.png"
-          alt=""
-          aria-hidden="true"
-        />
         <div class="container hero-inner">
-          <p class="eyebrow" data-i18n="hero_eyebrow">
-            OPERATIONAL INTELLIGENCE
-          </p>
-          <h1 data-i18n-html="hero_h1">
-            We don't sell software.<br /><span class="thin">We deliver</span>
-            trust.
-          </h1>
-          <p class="sub" data-i18n="hero_sub">
-            Technology that digitises, audits and monetises operations —
-            building trust, transparency, safety and human development.
-            Headquartered in Dubai, built for the world.
-          </p>
-          <div class="cta">
-            <a class="btn primary" href="#contact" data-i18n="cta_demo"
-              >Request a demo</a
-            >
-            <a class="btn ghost" href="#platform" data-i18n="cta_platform"
-              >Explore the platform</a
-            >
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero_eyebrow">
+              OPERATIONAL INTELLIGENCE
+            </p>
+            <h1 data-i18n-html="hero_h1">
+              Proprietary software.<br /><span class="thin"
+                >The entire operation.</span
+              >
+            </h1>
+            <p class="sub" data-i18n="hero_sub">
+              Proprietary platform, real time data, continuous auditing and
+              global scale in the cloud. Headquartered in Dubai, built for the
+              world.
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="#contact" data-i18n="cta_demo"
+                >Request a demo</a
+              >
+              <a class="btn ghost" href="#platform" data-i18n="cta_platform"
+                >Explore the platform</a
+              >
+            </div>
           </div>
+
+          <figure class="mark" id="heroMark">
+            <span class="mark-aura" aria-hidden="true"></span>
+            <img
+              class="mark-art"
+              src="assets/simbolo-transparente-escuro-2048.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </figure>
         </div>
         <div class="scrollcue" data-i18n="scroll">SCROLL</div>
       </section>
@@ -99,12 +106,12 @@
         <div class="container">
           <p class="eyebrow" data-i18n="diff_eyebrow">THE DIFFERENCE</p>
           <h2 data-i18n="diff_h2">
-            We're not a software company. We're an Operational Intelligence
-            company.
+            We are a technology company. Proprietary software, the entire
+            operation, from contract to payment.
           </h2>
           <p class="lead" data-i18n="diff_lead">
-            Software is only the means. The real product is the trust built
-            between who contracts, who manages, who executes and who is paid.
+            Software is the means. The result is the trust between who
+            contracts, who manages, who executes and who is paid.
           </p>
           <div class="grid grid-4">
             <article class="card">
@@ -135,8 +142,8 @@
             Technology exists to protect people and create trust.
           </h2>
           <blockquote class="declaration" data-i18n="phil_decl">
-            Technology that digitises, audits and monetises operations —
-            building trust, transparency, safety and human development.
+            Technology that digitises, audits and monetises operations, building
+            trust, transparency, safety and human development.
           </blockquote>
           <div class="verbs">
             <span data-i18n="phil_v1">Protect</span
@@ -154,7 +161,7 @@
             <p class="eyebrow" data-i18n="plat_eyebrow">THE PLATFORM</p>
             <h2 data-i18n="plat_h2">One engine. Many capabilities.</h2>
             <p class="lead" data-i18n="plat_lead">
-              Each capability solves a pain on its own — and all share the same
+              Each capability solves a pain on its own, and all share the same
               living database. It's the integration, not the isolated piece,
               that creates the advantage.
             </p>
@@ -169,7 +176,7 @@
               <div class="cap">
                 <h4 data-i18n="plat_c2_t">Digital Audit</h4>
                 <p data-i18n="plat_c2_d">
-                  An immutable trail — every action with author, date, time and
+                  An immutable trail. Every action with author, date, time and
                   version.
                 </p>
               </div>
@@ -199,7 +206,7 @@
               </div>
             </div>
             <p class="note" data-i18n="plat_note">
-              Delivered as SaaS — it scales globally, updates continuously and
+              Delivered as SaaS, it scales globally, updates continuously and
               runs in multiple languages. No install, no disruption.
             </p>
           </div>
@@ -223,10 +230,14 @@
                 <div class="l" data-i18n="kpi_alerts">OPEN ALERTS</div>
               </div>
             </div>
-            <div class="rows">
-              <i class="row g"></i><i class="row r"></i><i class="row"></i>
+            <div class="engine" id="engine">
+              <div class="engine-fallback">
+                <i class="row g"></i><i class="row r"></i><i class="row"></i>
+              </div>
             </div>
-            <div class="map"></div>
+            <p class="engine-cap" data-i18n="engine_cap">
+              Six capabilities, one engine.
+            </p>
           </aside>
         </div>
       </section>
@@ -239,48 +250,181 @@
           <p class="lead" data-i18n="scr_lead">
             These are the real views management and teams use every day.
           </p>
-          <div class="grid grid-4">
-            <article class="screen">
-              <span class="tag" data-i18n="scr_1_k">COMMAND</span>
-              <h3 data-i18n="scr_1_t">Command & Operation</h3>
-              <p data-i18n="scr_1_d">
-                Active sites, check-ins, alerts and reports on a single screen;
-                the field map, live.
-              </p>
+          <div class="feats">
+            <article class="feat">
+              <div class="feat-copy">
+                <span class="tag" data-i18n="ft1_k">COMMAND</span>
+                <h3 data-i18n="ft1_t">The whole operation in real time.</h3>
+                <p data-i18n="ft1_d">
+                  Active sites, check-ins, open alerts and the week's reports on
+                  a single screen, with the map of the sites on the ground,
+                  progress and occupancy included.
+                </p>
+              </div>
+              <figure class="device laptop">
+                <div class="bezel" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <img
+                  src="assets/screens/desk-overview.webp"
+                  width="1400"
+                  height="690"
+                  loading="lazy"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
             </article>
-            <article class="screen">
-              <span class="tag red" data-i18n="scr_2_k">SAFETY</span>
-              <h3 data-i18n="scr_2_t">Safety & SOS</h3>
-              <p data-i18n="scr_2_d">
-                Open alerts, incident history and alert management — immediate
-                response, fully auditable.
-              </p>
+
+            <article class="feat">
+              <div class="feat-copy">
+                <span class="tag" data-i18n="ft2_k">SITES</span>
+                <h3 data-i18n="ft2_t">
+                  Progress reported against hours consumed.
+                </h3>
+                <p data-i18n="ft2_d">
+                  The comparison that tells the truth. If the site is at 30 per
+                  cent and the hours are already at 45, there is still time to
+                  correct it.
+                </p>
+              </div>
+              <figure class="device laptop">
+                <div class="bezel" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <img
+                  src="assets/screens/desk-works.webp"
+                  width="1400"
+                  height="956"
+                  loading="lazy"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
             </article>
-            <article class="screen">
-              <span class="tag" data-i18n="scr_3_k">TEAM</span>
-              <h3 data-i18n="scr_3_t">Team & Structure</h3>
-              <p data-i18n="scr_3_d">
-                213 users managed, directory, org chart and a centralised
-                internal inbox.
-              </p>
+
+            <article class="feat">
+              <div class="feat-copy">
+                <span class="tag" data-i18n="ft3_k">PRESENCE</span>
+                <h3 data-i18n="ft3_t">Only whoever is really there counts.</h3>
+                <p data-i18n="ft3_d">
+                  Clock-in with geolocation. The perimeter only allows a punch
+                  inside the site, photography is mandatory, and time, place and
+                  author are stored together.
+                </p>
+              </div>
+              <figure class="device phone">
+                <img
+                  src="assets/screens/phone-checkin.webp"
+                  width="414"
+                  height="884"
+                  loading="lazy"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
             </article>
-            <article class="screen">
-              <span class="tag" data-i18n="scr_4_k">FINANCE</span>
-              <h3 data-i18n="scr_4_t">Finance & Audit</h3>
-              <p data-i18n="scr_4_d">
-                Profitability, budget by role, roles & prices, review and
-                compliance — while there's still time to act.
-              </p>
+
+            <article class="feat">
+              <div class="feat-copy">
+                <span class="tag red" data-i18n="ft4_k">SAFETY</span>
+                <h3 data-i18n="ft4_t">
+                  A call for help with address and time.
+                </h3>
+                <p data-i18n="ft4_d">
+                  The worker holds the emergency button and the alert reaches
+                  management with location and status, open or resolved, always
+                  followed through.
+                </p>
+              </div>
+              <figure class="device laptop">
+                <div class="bezel" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <img
+                  src="assets/screens/desk-alerts.webp"
+                  width="1400"
+                  height="956"
+                  loading="lazy"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
             </article>
-          </div>
-          <div class="approw">
-            <span class="apptag" data-i18n="app_label">WORKER APP</span>
-            <span data-i18n="app_1">Clock-in</span
-            ><span data-i18n="app_2">Punch type</span
-            ><span data-i18n="app_3">Voice report</span
-            ><span data-i18n="app_4">Notifications</span
-            ><span data-i18n="app_5">Payments</span
-            ><span class="sos" data-i18n="app_6">SOS alert</span>
+
+            <article class="feat">
+              <div class="feat-copy">
+                <span class="tag" data-i18n="ft5_k">TEAM</span>
+                <h3 data-i18n="ft5_t">The entire workforce, organised.</h3>
+                <p data-i18n="ft5_d">
+                  Every person with their role, the site they are on and the
+                  state of their contract. Directory, org chart and a
+                  centralised internal inbox.
+                </p>
+              </div>
+              <figure class="device laptop">
+                <div class="bezel" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <img
+                  src="assets/screens/desk-team.webp"
+                  width="1400"
+                  height="757"
+                  loading="lazy"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
+            </article>
+
+            <article class="feat">
+              <div class="feat-copy">
+                <span class="tag" data-i18n="ft6_k">AUDIT</span>
+                <h3 data-i18n="ft6_t">
+                  Nothing is erased. Everything is proven.
+                </h3>
+                <p data-i18n="ft6_d">
+                  An immutable trail: every operation with author, date, time,
+                  origin and version. The record only ever adds, nobody rewrites
+                  the past.
+                </p>
+              </div>
+              <figure class="device laptop">
+                <div class="bezel" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <img
+                  src="assets/screens/desk-audit.webp"
+                  width="1400"
+                  height="956"
+                  loading="lazy"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
+            </article>
+
+            <article class="feat">
+              <div class="feat-copy">
+                <span class="tag" data-i18n="ft7_k">WORKER APP</span>
+                <h3 data-i18n="ft7_t">The app of whoever builds.</h3>
+                <p data-i18n="ft7_d">
+                  Sign in, clock in, choose the type of punch. Voice report
+                  transcribed automatically. Notifications, payments and the
+                  emergency alert.
+                </p>
+              </div>
+              <figure class="device phone">
+                <img
+                  src="assets/screens/phone-report.webp"
+                  width="414"
+                  height="884"
+                  loading="lazy"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </figure>
+            </article>
           </div>
         </div>
       </section>
@@ -291,8 +435,8 @@
           <p class="eyebrow" data-i18n="pil_eyebrow">BRAND PILLARS</p>
           <h2 data-i18n="pil_h2">Eight principles. One direction.</h2>
           <p class="lead" data-i18n="pil_lead">
-            Each pillar is a concrete promise — and a decision criterion we
-            apply every day.
+            Each pillar is a concrete promise, and a decision criterion we apply
+            every day.
           </p>
           <div class="grid grid-4 pillars">
             <article class="pillar">
@@ -325,7 +469,7 @@
               <span class="num">05</span>
               <h3 data-i18n="pil_5_t">Humanisation</h3>
               <p data-i18n="pil_5_d">
-                The person at the centre — not the anonymous user.
+                The person at the centre, not the anonymous user.
               </p>
             </article>
             <article class="pillar">
@@ -390,7 +534,7 @@
                   Real-time indicators of the operation as it happens.
                 </li>
                 <li data-i18n="val_2_b">
-                  Continuous audit — compliance, not last-minute reconstruction.
+                  Continuous audit: compliance, not last-minute reconstruction.
                 </li>
                 <li data-i18n="val_2_c">
                   Productivity: every team and task measured with rigour.
@@ -433,7 +577,7 @@
           <p class="eyebrow" data-i18n="ver_eyebrow">MARKETS & APPLICATIONS</p>
           <h2 data-i18n="ver_h2">One technology engine. Many operations.</h2>
           <p class="lead" data-i18n="ver_lead">
-            Construction is our first application — never our limit. The same
+            Construction is our first application, never our limit. The same
             architecture serves any sector intensive in labour and assets.
           </p>
           <p class="tier-label" data-i18n="ver_validated">
@@ -445,7 +589,7 @@
             ><span data-i18n="ver_v3">Facilities & maintenance</span>
           </div>
           <p class="tier-label" data-i18n="ver_horizon">
-            HORIZON — EXPANSION BY ADJACENCY
+            HORIZON, EXPANSION BY ADJACENCY
           </p>
           <div class="chips">
             <span data-i18n="ver_h1">Industry</span
@@ -456,7 +600,7 @@
           </div>
           <p class="note" data-i18n="ver_global">
             Built to international standards, operating in multiple languages
-            and jurisdictions — from Dubai, to the world.
+            and jurisdictions. From Dubai, to the world.
           </p>
         </div>
       </section>
@@ -481,10 +625,10 @@
               </p>
             </article>
             <article class="group-child">
-              <div class="child-name">DÉCADAS</div>
+              <div class="child-name">DÃ‰CADAS</div>
               <p data-i18n="grp_child">
-                A group company — the specialised arm executing construction
-                operations across the European Union. Décadas is our validated
+                A group company, the specialised arm executing construction
+                operations across the European Union. DÃ©cadas is our validated
                 operation on the ground; it operates the platform, it does not
                 own it.
               </p>
@@ -505,15 +649,15 @@
           </h2>
           <p class="lead" data-i18n="dub_lead">
             We chose Dubai for being one of the most dynamic technology markets
-            on the planet — openness to international capital, ambition of
-            scale, and a project pipeline that demands exactly the
-            instrumentation we build.
+            on the planet. Openness to international capital, ambition of scale,
+            and a project pipeline that demands exactly the instrumentation we
+            build.
           </p>
           <div class="grid grid-4 figures">
             <div class="figure">
               <div class="fn g">+12%</div>
               <p data-i18n="dub_f1">
-                Tech and construction sector growth · 2026.
+                Tech and construction sector growth Â· 2026.
               </p>
             </div>
             <div class="figure">
@@ -580,10 +724,10 @@
         </div>
         <div class="foot-legal">
           <p>INFINITE WORLD MARKETING SERVICES VIA SOCIAL MEDIA CO. L.L.C.</p>
-          <p>Office OFF307-374 · Dubai Investment Park 1 (DIP 1) · Dubai</p>
-          <p>United Arab Emirates · www.infiniteworld.group</p>
+          <p>Office OFF307-374 Â· Dubai Investment Park 1 (DIP 1) Â· Dubai</p>
+          <p>United Arab Emirates Â· www.infiniteworld.group</p>
           <p class="copy">
-            © 2026 Infinite World ·
+            Â© 2026 Infinite World Â·
             <span data-i18n="foot_rights">All rights reserved.</span>
           </p>
         </div>
@@ -592,5 +736,6 @@
 
     <script src="i18n.js"></script>
     <script src="main.js"></script>
+    <script type="module" src="engine.js"></script>
   </body>
 </html>
