@@ -1783,3 +1783,60 @@ a.lang:hover {
     padding-right: 0;
   }
 }
+
+/* ---------- CATALOGUE: seven categories on one rule ---------- */
+.catalogue {
+  margin-top: 52px;
+  border-top: 1px solid var(--line);
+}
+.cat-row {
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  gap: 18px;
+  align-items: baseline;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cat-n {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+}
+.cat-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.cat-body p {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.cat-count {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 5px 11px;
+}
+#group .tier-label {
+  margin-top: 46px;
+}
+
+@media (max-width: 640px) {
+  .cat-row {
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+  }
+  .cat-count {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 10px;
+  }
+}

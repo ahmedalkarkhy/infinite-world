@@ -62,8 +62,10 @@ if (host) {
     const rig = new THREE.Group();
     scene.add(rig);
 
-    const LAYERS = 6;
-    const GAP = 0.34;
+    // one layer per catalogue category, so the object states the same count
+    // the section claims
+    const LAYERS = 7;
+    const GAP = 0.3;
     const slabGeo = new THREE.BoxGeometry(3.1, 0.11, 2.05);
     const edgeGeo = new THREE.BoxGeometry(3.16, 0.015, 2.11);
 
