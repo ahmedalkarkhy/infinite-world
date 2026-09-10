@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -39,8 +39,8 @@
         </a>
         <nav class="nav-links" id="navLinks">
           <a href="#company" data-i18n="nav_company">Company</a>
-          <a href="#platform" data-i18n="nav_platform">Platform</a>
           <a href="#verticals" data-i18n="nav_verticals">Verticals</a>
+          <a href="#platform" data-i18n="nav_platform">Platform</a>
           <a href="#group" data-i18n="nav_group">Group</a>
           <a href="#contact" data-i18n="nav_contact">Contact</a>
         </nav>
@@ -101,6 +101,35 @@
         <div class="scrollcue" data-i18n="scroll">SCROLL</div>
       </section>
 
+      <!-- PROOF / OPERATION IN NUMBERS -->
+      <section id="proof" class="section band proof">
+        <div class="container">
+          <p class="eyebrow" data-i18n="proof_eyebrow">THE OPERATION IN NUMBERS</p>
+          <div class="proof-strip">
+            <div class="kpi">
+              <div class="n g">44</div>
+              <div class="l" data-i18n="kpi_ops">ACTIVE OPERATIONS</div>
+            </div>
+            <div class="kpi">
+              <div class="n">61</div>
+              <div class="l" data-i18n="kpi_checkins">CHECK-INS TODAY</div>
+            </div>
+            <div class="kpi">
+              <div class="n g">100%</div>
+              <div class="l" data-i18n="kpi_audit">AUDIT</div>
+            </div>
+            <div class="kpi">
+              <div class="n r">0</div>
+              <div class="l" data-i18n="kpi_alerts">OPEN ALERTS</div>
+            </div>
+          </div>
+          <p class="proof-note" data-i18n="proof_note">
+            213 users managed on the platform, with directory, org chart and a
+            centralised internal inbox.
+          </p>
+        </div>
+      </section>
+
       <!-- COMPANY / DIFFERENTIAL -->
       <section id="company" class="section band">
         <div class="container">
@@ -134,23 +163,37 @@
         </div>
       </section>
 
-      <!-- PHILOSOPHY -->
-      <section id="philosophy" class="section band center">
-        <div class="container narrow">
-          <p class="eyebrow" data-i18n="phil_eyebrow">BRAND PHILOSOPHY</p>
-          <h2 data-i18n="phil_h2">
-            Technology exists to protect people and create trust.
-          </h2>
-          <blockquote class="declaration" data-i18n="phil_decl">
-            Technology that digitises, audits and monetises operations, building
-            trust, transparency, safety and human development.
-          </blockquote>
-          <div class="verbs">
-            <span data-i18n="phil_v1">Protect</span
-            ><span data-i18n="phil_v2">Trust</span
-            ><span data-i18n="phil_v3">Transparency</span
-            ><span data-i18n="phil_v4">Benefit</span>
+      <!-- VERTICALS -->
+      <section id="verticals" class="section band">
+        <div class="container">
+          <p class="eyebrow" data-i18n="ver_eyebrow">MARKETS & APPLICATIONS</p>
+          <h2 data-i18n="ver_h2">One technology engine. Many operations.</h2>
+          <p class="lead" data-i18n="ver_lead">
+            Construction is our first application, never our limit. The same
+            architecture serves any sector intensive in labour and assets.
+          </p>
+          <p class="tier-label" data-i18n="ver_validated">
+            VALIDATED OPERATION
+          </p>
+          <div class="chips strong">
+            <span data-i18n="ver_v1">Construction</span
+            ><span data-i18n="ver_v2">Public works</span
+            ><span data-i18n="ver_v3">Facilities & maintenance</span>
           </div>
+          <p class="tier-label" data-i18n="ver_horizon">
+            HORIZON, EXPANSION BY ADJACENCY
+          </p>
+          <div class="chips">
+            <span data-i18n="ver_h1">Industry</span
+            ><span data-i18n="ver_h2c">Logistics</span
+            ><span data-i18n="ver_h3">Energy & Infrastructure</span
+            ><span data-i18n="ver_h4">Health</span
+            ><span data-i18n="ver_h5">Field services</span>
+          </div>
+          <p class="note" data-i18n="ver_global">
+            Built to international standards, operating in multiple languages
+            and jurisdictions. From Dubai, to the world.
+          </p>
         </div>
       </section>
 
@@ -212,24 +255,6 @@
           </div>
           <aside class="panel" aria-hidden="true">
             <div class="panel-bar"><span></span><span></span><span></span></div>
-            <div class="kpis">
-              <div class="kpi">
-                <div class="n g">44</div>
-                <div class="l" data-i18n="kpi_ops">ACTIVE OPERATIONS</div>
-              </div>
-              <div class="kpi">
-                <div class="n">61</div>
-                <div class="l" data-i18n="kpi_checkins">CHECK-INS TODAY</div>
-              </div>
-              <div class="kpi">
-                <div class="n g">100%</div>
-                <div class="l" data-i18n="kpi_audit">AUDIT</div>
-              </div>
-              <div class="kpi">
-                <div class="n r">0</div>
-                <div class="l" data-i18n="kpi_alerts">OPEN ALERTS</div>
-              </div>
-            </div>
             <div class="engine" id="engine">
               <div class="engine-fallback">
                 <i class="row g"></i><i class="row r"></i><i class="row"></i>
@@ -429,72 +454,6 @@
         </div>
       </section>
 
-      <!-- PILLARS -->
-      <section id="pillars" class="section band">
-        <div class="container">
-          <p class="eyebrow" data-i18n="pil_eyebrow">BRAND PILLARS</p>
-          <h2 data-i18n="pil_h2">Eight principles. One direction.</h2>
-          <p class="lead" data-i18n="pil_lead">
-            Each pillar is a concrete promise, and a decision criterion we apply
-            every day.
-          </p>
-          <div class="grid grid-4 pillars">
-            <article class="pillar">
-              <span class="num">01</span>
-              <h3 data-i18n="pil_1_t">Trust</h3>
-              <p data-i18n="pil_1_d">
-                The asset technology builds between all parties.
-              </p>
-            </article>
-            <article class="pillar">
-              <span class="num">02</span>
-              <h3 data-i18n="pil_2_t">Transparency</h3>
-              <p data-i18n="pil_2_d">
-                Every hour, datum and decision, visible to who decides.
-              </p>
-            </article>
-            <article class="pillar">
-              <span class="num">03</span>
-              <h3 data-i18n="pil_3_t">Technology</h3>
-              <p data-i18n="pil_3_d">Proprietary platform, real-time data.</p>
-            </article>
-            <article class="pillar">
-              <span class="num">04</span>
-              <h3 data-i18n="pil_4_t">Intelligence</h3>
-              <p data-i18n="pil_4_d">
-                We turn records into decisions and risk into anticipation.
-              </p>
-            </article>
-            <article class="pillar">
-              <span class="num">05</span>
-              <h3 data-i18n="pil_5_t">Humanisation</h3>
-              <p data-i18n="pil_5_d">
-                The person at the centre, not the anonymous user.
-              </p>
-            </article>
-            <article class="pillar">
-              <span class="num">06</span>
-              <h3 data-i18n="pil_6_t">Governance</h3>
-              <p data-i18n="pil_6_d">Continuous audit and permanent history.</p>
-            </article>
-            <article class="pillar">
-              <span class="num">07</span>
-              <h3 data-i18n="pil_7_t">Profitability</h3>
-              <p data-i18n="pil_7_d">
-                More margin, less waste, safer decisions.
-              </p>
-            </article>
-            <article class="pillar">
-              <span class="num">08</span>
-              <h3 data-i18n="pil_8_t">Scalability</h3>
-              <p data-i18n="pil_8_d">
-                A model replicable in any market or language.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <!-- VALUE FOR EACH LINK -->
       <section id="value" class="section band">
         <div class="container">
@@ -571,40 +530,6 @@
         </div>
       </section>
 
-      <!-- VERTICALS -->
-      <section id="verticals" class="section band">
-        <div class="container">
-          <p class="eyebrow" data-i18n="ver_eyebrow">MARKETS & APPLICATIONS</p>
-          <h2 data-i18n="ver_h2">One technology engine. Many operations.</h2>
-          <p class="lead" data-i18n="ver_lead">
-            Construction is our first application, never our limit. The same
-            architecture serves any sector intensive in labour and assets.
-          </p>
-          <p class="tier-label" data-i18n="ver_validated">
-            VALIDATED OPERATION
-          </p>
-          <div class="chips strong">
-            <span data-i18n="ver_v1">Construction</span
-            ><span data-i18n="ver_v2">Public works</span
-            ><span data-i18n="ver_v3">Facilities & maintenance</span>
-          </div>
-          <p class="tier-label" data-i18n="ver_horizon">
-            HORIZON, EXPANSION BY ADJACENCY
-          </p>
-          <div class="chips">
-            <span data-i18n="ver_h1">Industry</span
-            ><span data-i18n="ver_h2c">Logistics</span
-            ><span data-i18n="ver_h3">Energy & Infrastructure</span
-            ><span data-i18n="ver_h4">Health</span
-            ><span data-i18n="ver_h5">Field services</span>
-          </div>
-          <p class="note" data-i18n="ver_global">
-            Built to international standards, operating in multiple languages
-            and jurisdictions. From Dubai, to the world.
-          </p>
-        </div>
-      </section>
-
       <!-- GROUP -->
       <section id="group" class="section band">
         <div class="container">
@@ -636,6 +561,92 @@
                 An Infinite World company.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PILLARS -->
+      <section id="pillars" class="section band">
+        <div class="container">
+          <p class="eyebrow" data-i18n="pil_eyebrow">BRAND PILLARS</p>
+          <h2 data-i18n="pil_h2">Eight principles. One direction.</h2>
+          <p class="lead" data-i18n="pil_lead">
+            Each pillar is a concrete promise, and a decision criterion we apply
+            every day.
+          </p>
+          <div class="grid grid-4 pillars">
+            <article class="pillar">
+              <span class="num">01</span>
+              <h3 data-i18n="pil_1_t">Trust</h3>
+              <p data-i18n="pil_1_d">
+                The asset technology builds between all parties.
+              </p>
+            </article>
+            <article class="pillar">
+              <span class="num">02</span>
+              <h3 data-i18n="pil_2_t">Transparency</h3>
+              <p data-i18n="pil_2_d">
+                Every hour, datum and decision, visible to who decides.
+              </p>
+            </article>
+            <article class="pillar">
+              <span class="num">03</span>
+              <h3 data-i18n="pil_3_t">Technology</h3>
+              <p data-i18n="pil_3_d">Proprietary platform, real-time data.</p>
+            </article>
+            <article class="pillar">
+              <span class="num">04</span>
+              <h3 data-i18n="pil_4_t">Intelligence</h3>
+              <p data-i18n="pil_4_d">
+                We turn records into decisions and risk into anticipation.
+              </p>
+            </article>
+            <article class="pillar">
+              <span class="num">05</span>
+              <h3 data-i18n="pil_5_t">Humanisation</h3>
+              <p data-i18n="pil_5_d">
+                The person at the centre, not the anonymous user.
+              </p>
+            </article>
+            <article class="pillar">
+              <span class="num">06</span>
+              <h3 data-i18n="pil_6_t">Governance</h3>
+              <p data-i18n="pil_6_d">Continuous audit and permanent history.</p>
+            </article>
+            <article class="pillar">
+              <span class="num">07</span>
+              <h3 data-i18n="pil_7_t">Profitability</h3>
+              <p data-i18n="pil_7_d">
+                More margin, less waste, safer decisions.
+              </p>
+            </article>
+            <article class="pillar">
+              <span class="num">08</span>
+              <h3 data-i18n="pil_8_t">Scalability</h3>
+              <p data-i18n="pil_8_d">
+                A model replicable in any market or language.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY -->
+      <section id="philosophy" class="section band center">
+        <div class="container narrow">
+          <p class="eyebrow" data-i18n="phil_eyebrow">BRAND PHILOSOPHY</p>
+          <h2 data-i18n="phil_h2">
+            Technology exists to protect people and create trust.
+          </h2>
+          <blockquote class="declaration" data-i18n="phil_decl">
+            Technology that digitises, audits and monetises operations, building
+            trust, transparency, safety and human development.
+          </blockquote>
+          <div class="verbs">
+            <span data-i18n="phil_v1">Protect</span
+            ><span data-i18n="phil_v2">Trust</span
+            ><span data-i18n="phil_v3">Transparency</span
+            ><span data-i18n="phil_v4">Benefit</span>
           </div>
         </div>
       </section>

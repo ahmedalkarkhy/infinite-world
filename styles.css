@@ -521,11 +521,6 @@ h2 {
   border-radius: 50%;
   background: #3a3f47;
 }
-.kpis {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
 .kpi {
   background: var(--panel-2);
   border: 1px solid var(--line);
@@ -547,6 +542,37 @@ h2 {
   letter-spacing: 1px;
   color: var(--muted);
   margin-top: 4px;
+}
+
+/* Proof band: the same numbers, now reading as a claim instead of a mock UI.
+   Tighter than a full section: it is a strip under the hero, not a chapter. */
+.proof {
+  padding: 66px 0;
+}
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+.proof .kpi {
+  padding: 28px 24px;
+}
+.proof .kpi .n {
+  font-size: 46px;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+.proof .kpi .l {
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  margin-top: 10px;
+}
+.proof-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 22px;
+  max-width: 70ch;
 }
 .rows {
   margin-top: 14px;
@@ -582,7 +608,7 @@ h2 {
 /* ---------- ENGINE PANEL ---------- */
 .engine {
   position: relative;
-  height: 210px;
+  height: 300px;
   margin-top: 18px;
 }
 /* Absolute so the canvas can never feed its own size back into the box it is
@@ -949,6 +975,9 @@ h2 {
 
 /* ---------- TABLET ---------- */
 @media (max-width: 980px) {
+  .proof-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
   :root {
     --pad: 88px;
   }
@@ -975,6 +1004,12 @@ h2 {
 
 /* ---------- MOBILE ---------- */
 @media (max-width: 640px) {
+  .proof .kpi {
+    padding: 20px 18px;
+  }
+  .proof .kpi .n {
+    font-size: 34px;
+  }
   :root {
     --pad: 64px;
   }
@@ -1057,8 +1092,7 @@ h2 {
     margin: 0 auto;
   }
   .grid-4,
-  .grid-3,
-  .kpis {
+  .grid-3 {
     grid-template-columns: 1fr;
   }
   .grid-4.pillars {

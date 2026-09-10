@@ -59,6 +59,10 @@ const I18N = {
     plat_c6_d: "Anomaly detection and risk anticipation from live data.",
     plat_note:
       "Delivered as SaaS, it scales globally, updates continuously and runs in multiple languages. No install, no disruption.",
+    proof_eyebrow: "THE OPERATION IN NUMBERS",
+    proof_note:
+      "213 users managed on the platform, with directory, org chart and a centralised internal inbox.",
+
     kpi_ops: "ACTIVE OPERATIONS",
     kpi_checkins: "CHECK-INS TODAY",
     kpi_audit: "AUDIT",
@@ -266,6 +270,10 @@ const I18N = {
     plat_c6_d: "Deteção de anomalias e antecipação de riscos com dados vivos.",
     plat_note:
       "Entregue como SaaS, escala globalmente, atualiza-se continuamente e opera em múltiplos idiomas. Sem instalação, sem rutura.",
+    proof_eyebrow: "A OPERAÇÃO EM NÚMEROS",
+    proof_note:
+      "213 utilizadores geridos na plataforma, com diretório, organograma e uma caixa interna centralizada.",
+
     kpi_ops: "OPERAÇÕES ACTIVAS",
     kpi_checkins: "CHECK-INS HOJE",
     kpi_audit: "AUDITORIA",
