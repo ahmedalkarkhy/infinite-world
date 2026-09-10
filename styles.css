@@ -1641,3 +1641,145 @@ a.lang:hover {
     margin: 6px 0 4px;
   }
 }
+
+/* ---------- CHAIN: a sequence that has to read as one movement ---------- */
+.chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+  margin-top: 40px;
+}
+.chain .step {
+  flex: 1 1 0;
+  min-width: 128px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 18px 16px;
+  position: relative;
+}
+.chain .step b {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.chain .step span {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.chain .step + .step::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid var(--green);
+  border-right: 1.5px solid var(--green);
+  transform: translateY(-50%) rotate(45deg);
+}
+.chain .step:last-child {
+  border-color: var(--green);
+}
+
+/* ---------- TIMELINE: dates on a single rule ---------- */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin-top: 44px;
+  border-top: 1px solid var(--line);
+}
+.timeline .tick {
+  padding: 22px 18px 0 0;
+  position: relative;
+}
+.timeline .tick::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+}
+.timeline .tick.past::before {
+  background: var(--line);
+}
+.timeline .when {
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+  color: var(--green-b);
+}
+.timeline .tick.past .when {
+  color: var(--muted);
+}
+.timeline .what {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 600;
+}
+.timeline .who {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ---------- REGIONS: where the copies live ---------- */
+.regions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 34px;
+}
+.region {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--green);
+  border-radius: 0 10px 10px 0;
+  padding: 18px;
+}
+.region b {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+}
+.region span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+@media (max-width: 980px) {
+  .timeline {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 0;
+  }
+  .regions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .chain .step + .step::before {
+    display: none;
+  }
+  .chain .step {
+    flex: 1 1 100%;
+  }
+  .timeline,
+  .regions {
+    grid-template-columns: 1fr;
+  }
+  .timeline .tick {
+    padding-right: 0;
+  }
+}
