@@ -1840,3 +1840,18 @@ a.lang:hover {
     margin-top: 10px;
   }
 }
+
+/* An inner page promotes its opening section heading to h1, so it needs to
+   look like the h2 it replaced rather than like the hero. */
+.sec-title {
+  font-size: 38px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  max-width: 20ch;
+}
+@media (max-width: 640px) {
+  .sec-title {
+    font-size: 26px;
+  }
+}

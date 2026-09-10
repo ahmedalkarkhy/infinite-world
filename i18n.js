@@ -30,6 +30,14 @@ const I18N = {
     mn_card_ver_cta: "See the verticals",
     nav_contact: "Contact",
 
+    pt_home: "Infinite World | The Intelligence Layer for the Real World",
+    pd_home: "One technology core, seven categories, thirty solutions and six verticals. Headquarters in Dubai, European hub in Brussels.",
+    pt_platform: "What We Do | Infinite World",
+    pd_platform: "The digital catalogue: seven categories and thirty solutions on a single technology core, the biometric workforce layer, and the commercial architecture from diagnosis to expansion.",
+    pt_trust: "Trust | Infinite World",
+    pd_trust: "Redundancy, recovery and protection inside the European Union, and the regulatory framework the platform is built against: GDPR and the AI Act.",
+    pt_company: "Who We Are | Infinite World",
+    pd_company: "A Dubai holding with international operations. Global headquarters in Dubai, European hub in Brussels, and the principles the company operates by.",
     hero_eyebrow: "INFINITE WORLD",
     kpi_core: "TECHNOLOGY CORE",
     kpi_categories: "CATEGORIES",
@@ -351,6 +359,14 @@ const I18N = {
     mn_card_ver_cta: "Ver as verticais",
     nav_contact: "Contacto",
 
+    pt_home: "Infinite World | A Camada de Inteligência do Mundo Real",
+    pd_home: "Um núcleo tecnológico, sete categorias, trinta soluções e seis verticais. Sede mundial em Dubai, hub europeu em Bruxelas.",
+    pt_platform: "O Que Fazemos | Infinite World",
+    pd_platform: "O catálogo digital: sete categorias e trinta soluções sobre um único núcleo tecnológico, a camada biométrica e a arquitetura comercial do diagnóstico à expansão.",
+    pt_trust: "Confiança | Infinite World",
+    pd_trust: "Redundância, recuperação e proteção dentro da União Europeia, e o quadro normativo em que a plataforma é construída: RGPD e AI Act.",
+    pt_company: "Quem Somos | Infinite World",
+    pd_company: "Uma holding de Dubai com operação internacional. Sede mundial em Dubai, hub europeu em Bruxelas, e os princípios por que a companhia opera.",
     hero_eyebrow: "INFINITE WORLD",
     kpi_core: "NÚCLEO TECNOLÓGICO",
     kpi_categories: "CATEGORIAS",
@@ -657,6 +673,11 @@ function applyLang(lang) {
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const v = dict[el.getAttribute("data-i18n-html")];
     if (v != null) el.innerHTML = v;
+  });
+  // Page titles and meta descriptions translate through an attribute
+  document.querySelectorAll("[data-i18n-content]").forEach((el) => {
+    const v = dict[el.getAttribute("data-i18n-content")];
+    if (v != null) el.setAttribute("content", v);
   });
   // Legal pages are one file per language, so their links move with the toggle
   document.querySelectorAll("[data-i18n-href]").forEach((el) => {
