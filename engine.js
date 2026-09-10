@@ -14,7 +14,7 @@ if (host) {
     renderer = null;
   }
 
-  if (renderer && !reduce) {
+  if (renderer) {
     host.classList.add("live");
 
     const size = () => ({ w: host.clientWidth, h: host.clientHeight });
@@ -110,31 +110,8 @@ if (host) {
 
     let open = 0; // 0 solid block, 1 fully separated
     let target = 0;
-    const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => (target = e.isIntersecting ? 1 : 0)),
-      { threshold: 0.35 },
-    );
-    io.observe(host);
 
-    /* ResizeObserver rather than a window listener: the panel can get its real
-       height after the stylesheet lands, and a canvas sized from a zero box
-       would stay wrong forever. */
-    const fit = () => {
-      ({ w, h } = size());
-      if (!w || !h) return;
-      camera.aspect = w / h;
-      camera.updateProjectionMatrix();
-      renderer.setSize(w, h);
-    };
-    new ResizeObserver(fit).observe(host);
-    fit();
-
-    const clock = new THREE.Clock();
-
-    renderer.setAnimationLoop(() => {
-      const t = clock.getElapsedTime();
-      open += (target - open) * 0.045;
-
+    const draw = (t) => {
       slabs.forEach((layer, i) => {
         const centred = i - (LAYERS - 1) / 2;
         layer.position.y = centred * GAP * open;
@@ -145,6 +122,41 @@ if (host) {
       rig.rotation.x = 0.34;
 
       renderer.render(scene, camera);
-    });
+    };
+
+    /* ResizeObserver rather than a window listener: the panel can get its real
+       height after the stylesheet lands, and a canvas sized from a zero box
+       would stay wrong forever. */
+    const fit = () => {
+      ({ w, h } = size());
+      if (!w || !h) return;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+      if (reduce) draw(0);
+    };
+    new ResizeObserver(fit).observe(host);
+    fit();
+
+    if (reduce) {
+      /* The preference asks for no movement, not for less to look at: the
+         object is drawn once, already open, and never animates again. */
+      open = 1;
+      target = 1;
+      draw(0);
+    } else {
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((e) => (target = e.isIntersecting ? 1 : 0)),
+        { threshold: 0.35 },
+      );
+      io.observe(host);
+
+      const clock = new THREE.Clock();
+
+      renderer.setAnimationLoop(() => {
+        open += (target - open) * 0.045;
+        draw(clock.getElapsedTime());
+      });
+    }
   }
 }
