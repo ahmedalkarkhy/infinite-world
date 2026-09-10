@@ -1,3 +1,16 @@
+/* Montserrat is served from this domain, not from Google. A visitor's IP
+   never reaches a third party, so the site needs no consent banner. */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("assets/fonts/montserrat-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* Infinite World, institutional site */
 :root {
   --field: #14171b;
@@ -1140,5 +1153,199 @@ h2 {
   .screen:hover,
   .pillar:hover {
     transform: none;
+  }
+}
+
+/* ---------- LEGAL PAGES ---------- */
+.legal {
+  padding: 84px 0 110px;
+}
+.legal h1 {
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-top: 10px;
+}
+.legal-meta {
+  margin-top: 14px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.legal .lead {
+  margin-top: 26px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-sec {
+  padding-top: 46px;
+}
+.legal-sec h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 16px;
+  /* hanging indent: a wrapped title lines up with the title, not the number */
+  padding-left: 46px;
+  text-indent: -46px;
+}
+.legal-n {
+  display: inline-block;
+  min-width: 46px;
+  color: var(--green-b);
+  font-variant-numeric: tabular-nums;
+}
+.legal-sec p,
+.legal-sec li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.72;
+}
+.legal-sec p + p,
+.legal-sec > ul,
+.legal-sec > .table-wrap,
+.legal-sec ul + p,
+.legal-sec .table-wrap + p {
+  margin-top: 14px;
+}
+.legal-sec ul {
+  list-style: none;
+  padding-left: 46px;
+}
+.legal-sec li + li {
+  margin-top: 12px;
+}
+.legal-sec li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  margin-right: 12px;
+  margin-left: -18px;
+  vertical-align: 3px;
+}
+.legal-sec b {
+  color: var(--text);
+  font-weight: 600;
+}
+.legal-sec a {
+  color: var(--green-b);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(23, 184, 102, 0.4);
+}
+.legal-sec a:hover {
+  border-bottom-color: var(--green-b);
+}
+.legal-sec .addr {
+  color: var(--text);
+  font-weight: 500;
+  padding-left: 46px;
+}
+.legal-sec .fine {
+  font-size: 13px;
+  color: #7f858d;
+  padding-top: 12px;
+}
+.legal-sec > p,
+.legal-sec > .fine {
+  padding-left: 46px;
+}
+.legal-sec code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 6px;
+}
+.table-wrap {
+  overflow-x: auto;
+  margin-left: 46px;
+}
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 520px;
+}
+.legal-table th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 0 16px 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.legal-table td {
+  color: var(--muted);
+  padding: 14px 16px 14px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.6;
+}
+.legal-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Anything the client still has to supply. Deliberately loud: this must never
+   reach production unnoticed. */
+.todo {
+  display: inline-block;
+  color: var(--red-b);
+  border: 1px dashed rgba(255, 82, 104, 0.55);
+  border-radius: 5px;
+  padding: 1px 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* The language switch is a link on these pages, not a button */
+a.lang {
+  text-decoration: none;
+  display: inline-block;
+}
+a.lang:hover {
+  border-color: var(--muted);
+}
+.foot-links {
+  margin-top: 14px;
+}
+.foot-links a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.foot-links a:hover {
+  border-bottom-color: var(--green-b);
+}
+
+@media (max-width: 640px) {
+  .legal-sec h2 {
+    padding-left: 0;
+    text-indent: 0;
+  }
+  .legal-n {
+    display: block;
+    min-width: 0;
+    margin-bottom: 6px;
+  }
+  .legal-sec > p,
+  .legal-sec > .fine,
+  .legal-sec .addr,
+  .legal-sec ul {
+    padding-left: 0;
+  }
+  .legal-sec li::before {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .table-wrap {
+    margin-left: 0;
   }
 }

@@ -211,6 +211,10 @@ const I18N = {
 
     foot_tag: "Built to the scale of infinity.",
     foot_rights: "All rights reserved.",
+    foot_privacy: "Privacy",
+    foot_notice: "Legal Notice",
+    foot_privacy_href: "privacy.html",
+    foot_notice_href: "legal-notice.html",
   },
   pt: {
     nav_company: "Empresa",
@@ -425,6 +429,10 @@ const I18N = {
 
     foot_tag: "Construímos à escala do infinito.",
     foot_rights: "Todos os direitos reservados.",
+    foot_privacy: "Privacidade",
+    foot_notice: "Aviso Legal",
+    foot_privacy_href: "privacidade.html",
+    foot_notice_href: "aviso-legal.html",
   },
 };
 
@@ -438,6 +446,11 @@ function applyLang(lang) {
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const v = dict[el.getAttribute("data-i18n-html")];
     if (v != null) el.innerHTML = v;
+  });
+  // Legal pages are one file per language, so their links move with the toggle
+  document.querySelectorAll("[data-i18n-href]").forEach((el) => {
+    const v = dict[el.getAttribute("data-i18n-href")];
+    if (v != null) el.setAttribute("href", v);
   });
   const t = document.getElementById("langToggle");
   if (t) {

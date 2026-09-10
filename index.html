@@ -18,11 +18,12 @@
     />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/png" href="assets/favicon-256.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="assets/fonts/montserrat-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -737,10 +738,28 @@
         </div>
         <div class="foot-legal">
           <p>INFINITE WORLD MARKETING SERVICES VIA SOCIAL MEDIA CO. L.L.C.</p>
-          <p>Office OFF307-374 Â· Dubai Investment Park 1 (DIP 1) Â· Dubai</p>
-          <p>United Arab Emirates Â· www.infiniteworld.group</p>
+          <p>
+            Office OFF307-374 &middot; Dubai Investment Park 1 (DIP 1) &middot;
+            Dubai
+          </p>
+          <p>United Arab Emirates &middot; www.infiniteworld.group</p>
+          <p class="foot-links">
+            <a
+              href="privacidade.html"
+              data-i18n="foot_privacy"
+              data-i18n-href="foot_privacy_href"
+              >Privacy</a
+            >
+            &middot;
+            <a
+              href="aviso-legal.html"
+              data-i18n="foot_notice"
+              data-i18n-href="foot_notice_href"
+              >Legal Notice</a
+            >
+          </p>
           <p class="copy">
-            Â© 2026 Infinite World Â·
+            &copy; 2026 Infinite World &middot;
             <span data-i18n="foot_rights">All rights reserved.</span>
           </p>
         </div>
