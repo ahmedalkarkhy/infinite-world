@@ -172,7 +172,7 @@ const I18N = {
       "When technology protects who executes, trust becomes the product.",
 
     ver_eyebrow: "MARKETS & APPLICATIONS",
-    ver_h2: "One technology engine. Many operations.",
+    ver_h2: "Validated in construction. Built for any operation.",
     ver_lead:
       "Construction is our first application, never our limit. The same architecture serves any sector intensive in labour and assets.",
     ver_validated: "VALIDATED OPERATION",
@@ -386,7 +386,7 @@ const I18N = {
       "Quando a tecnologia protege quem executa, a confiança torna-se o produto.",
 
     ver_eyebrow: "MERCADOS E APLICAÇÕES",
-    ver_h2: "Um motor tecnológico. Múltiplas operações.",
+    ver_h2: "Validado na construção. Construído para qualquer operação.",
     ver_lead:
       "A construção civil é a nossa primeira aplicação, nunca o nosso limite. A mesma arquitetura serve qualquer setor intensivo em mão de obra e ativos.",
     ver_validated: "OPERAÇÃO VALIDADA",
