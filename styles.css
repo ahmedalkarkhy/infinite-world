@@ -633,6 +633,34 @@ h2 {
   width: 100%;
   height: 100%;
 }
+/* Drawn when the browser has no WebGL or the visitor asked for reduced motion.
+   It shows the same six layers the engine does, so a panel without 3D still
+   reads as a designed object rather than a broken one. */
+.engine-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  transform: rotateX(58deg) rotateZ(-38deg);
+}
+.engine-fallback i {
+  display: block;
+  width: 172px;
+  height: 46px;
+  border-radius: 8px;
+  border: 1px solid #333a44;
+  background: linear-gradient(135deg, #262c34, #191d23);
+  box-shadow: 0 14px 26px -16px rgba(0, 0, 0, 0.95);
+}
+.engine-fallback i.g {
+  border-color: var(--green);
+}
+.engine-fallback i.r {
+  border-color: var(--red);
+}
 .engine.live .engine-fallback {
   display: none;
 }
