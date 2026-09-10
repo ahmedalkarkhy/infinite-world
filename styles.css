@@ -1040,6 +1040,12 @@ h2 {
   .burger {
     display: flex;
   }
+  /* The drawer is a positioned descendant of the header, so it paints over the
+     close button unless the controls are lifted above it. */
+  .nav-right {
+    position: relative;
+    z-index: 41;
+  }
   .nav-links {
     display: none;
     position: fixed;
@@ -1347,5 +1353,263 @@ a.lang:hover {
   }
   .table-wrap {
     margin-left: 0;
+  }
+}
+/* ---------- MEGA MENU (business areas) ---------- */
+/* The panel is absolute against #nav, which is sticky and therefore the
+   containing block, so it can span the full width from inside a flex item. */
+.nav-item {
+  position: static;
+}
+.mega-trigger {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.mega-trigger:hover,
+.mega-trigger[aria-expanded="true"] {
+  color: var(--text);
+}
+.caret {
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.25s;
+}
+.mega-trigger[aria-expanded="true"] .caret {
+  transform: translateY(1px) rotate(-135deg);
+}
+.mega {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--panel-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 40px 70px -40px rgba(0, 0, 0, 0.9);
+  z-index: 45;
+  animation: megaIn 0.22s ease;
+}
+@keyframes megaIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+.mega-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 38px 40px 42px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 54px;
+  align-items: start;
+}
+.mega-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 44px;
+}
+.mega-col.wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 44px;
+}
+.mega-link {
+  display: block;
+  padding: 11px 0;
+  border-bottom: 1px solid transparent;
+}
+.mega-link b {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  transition: color 0.2s;
+}
+.mega-link span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.mega-link:hover b {
+  color: var(--green-b);
+}
+.mega-h {
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  color: var(--green-b);
+  margin-bottom: 14px;
+}
+.mega-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.mega-chip {
+  font-size: 12.5px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 7px 14px;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.mega-chip:hover {
+  color: var(--text);
+  border-color: var(--green);
+}
+.mega-card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  transition: border-color 0.2s;
+}
+.mega-card:hover {
+  border-color: var(--green);
+}
+.mega-card-art {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--panel-2);
+  aspect-ratio: 16 / 10;
+}
+.mega-card-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  display: block;
+}
+.mega-card-art img.mark {
+  object-fit: contain;
+  padding: 22px;
+  filter: drop-shadow(0 12px 26px rgba(0, 128, 64, 0.28));
+}
+.mega-card-cap {
+  display: block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text);
+}
+.mega-card-cta {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: var(--green-b);
+}
+
+@media (max-width: 980px) {
+  .mega-inner {
+    grid-template-columns: 1fr 240px;
+    gap: 34px;
+    padding: 30px 40px 34px;
+  }
+}
+
+@media (max-width: 760px) {
+  .mega-inner {
+    grid-template-columns: 1fr;
+  }
+  .mega-card {
+    display: none;
+  }
+}
+
+/* Inside the off canvas drawer the panels stop floating and become an
+   accordion, so the whole tree is reachable with one thumb. */
+@media (max-width: 640px) {
+  .nav-links {
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding: 76px 30px 40px;
+    gap: 0;
+  }
+  .nav-item {
+    border-bottom: 1px solid var(--line);
+  }
+  .mega-trigger {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 18px;
+    color: var(--text);
+    padding: 20px 0;
+  }
+  .caret {
+    width: 8px;
+    height: 8px;
+  }
+  .mega {
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    animation: none;
+  }
+  .mega-inner {
+    padding: 0 0 18px;
+    gap: 0;
+  }
+  .mega-cols,
+  .mega-col.wide {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .mega-col + .mega-col {
+    margin-top: 18px;
+  }
+  .nav-links .mega-link {
+    padding: 9px 0;
+  }
+  .nav-links .mega-link b {
+    font-size: 15px;
+  }
+  .mega-link span {
+    display: none;
+  }
+  .nav-links > a {
+    padding: 20px 0;
+    font-size: 18px;
+  }
+  /* Pills wrap onto two lines each in a narrow drawer, so they become a list */
+  .mega-chips {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .nav-links .mega-chip {
+    border: none;
+    border-radius: 0;
+    padding: 9px 0;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .mega-h {
+    margin: 6px 0 4px;
   }
 }

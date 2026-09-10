@@ -28,22 +28,96 @@
     });
   }
 
-  // mobile menu
+  /* Mega menu by business area, plus the mobile drawer that contains it.
+     On a pointer device the panels also open on hover; on touch and by
+     keyboard the trigger is a plain toggle button. */
+  const triggers = [...document.querySelectorAll(".mega-trigger")];
+  const panelOf = (t) => document.getElementById(t.getAttribute("aria-controls"));
+
+  const closeMega = (except) => {
+    triggers.forEach((t) => {
+      if (t === except) return;
+      t.setAttribute("aria-expanded", "false");
+      const panel = panelOf(t);
+      if (panel) panel.hidden = true;
+    });
+  };
+
+  const openMega = (t) => {
+    closeMega(t);
+    t.setAttribute("aria-expanded", "true");
+    const panel = panelOf(t);
+    if (panel) panel.hidden = false;
+  };
+
+  const isOpen = (t) => t.getAttribute("aria-expanded") === "true";
+
   if (burger && links) {
-    const close = () => {
+    const closeDrawer = () => {
       links.classList.remove("open");
       burger.classList.remove("open");
       burger.setAttribute("aria-expanded", "false");
+      closeMega();
     };
     burger.addEventListener("click", () => {
       const open = links.classList.toggle("open");
       burger.classList.toggle("open", open);
       burger.setAttribute("aria-expanded", String(open));
+      if (!open) closeMega();
     });
-    links
-      .querySelectorAll("a")
-      .forEach((a) => a.addEventListener("click", close));
+    links.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => {
+        closeDrawer();
+      }),
+    );
   }
+
+  triggers.forEach((t) => {
+    t.addEventListener("click", () => {
+      if (isOpen(t)) closeMega();
+      else openMega(t);
+    });
+  });
+
+  const hoverable = window.matchMedia("(hover: hover) and (min-width: 641px)");
+  if (nav) {
+    let timer;
+    triggers.forEach((t) => {
+      const item = t.closest(".nav-item");
+      if (!item) return;
+      item.addEventListener("pointerenter", () => {
+        if (!hoverable.matches) return;
+        clearTimeout(timer);
+        timer = setTimeout(() => openMega(t), 90);
+      });
+    });
+    nav.addEventListener("pointerleave", () => {
+      if (!hoverable.matches) return;
+      clearTimeout(timer);
+      timer = setTimeout(() => closeMega(), 180);
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    const open = triggers.find(isOpen);
+    if (!open) return;
+    closeMega();
+    open.focus();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (nav && !nav.contains(e.target)) closeMega();
+  });
+
+  // A panel pinned over content the reader has already scrolled past is noise
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (hoverable.matches) closeMega();
+    },
+    { passive: true },
+  );
 
   // stagger: every card in a group carries its own position in the queue
   document
