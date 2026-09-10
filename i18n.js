@@ -514,7 +514,7 @@ function applyLang(lang) {
   } catch (e) {}
 }
 
-const DEFAULT_LANG = "pt";
+const DEFAULT_LANG = "en";
 
 (function initLang() {
   let lang = DEFAULT_LANG;
